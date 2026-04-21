@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bpqiswpghmxyh"]
+
+[ext_resource type="PackedScene" uid="uid://0ransh0epqxp" path="res://assets/Scenes/MatTest.tscn" id="1_tho1t"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1678274034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.320805, 0, -14.119968)
+
+[node name="Node3D" parent="." unique_id=2047402361 instance=ExtResource("1_tho1t")]

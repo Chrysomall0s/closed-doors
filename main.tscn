@@ -1,24 +1,23 @@
 [gd_scene format=3 uid="uid://cftjvyhrpj3el"]
 
 [ext_resource type="PackedScene" uid="uid://bqoji1l8k6be6" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://bivv0e30b0kot" path="res://room.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bpqiswpghmxyh" path="res://roomtest1.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dkd8rbmufrkh4" path="res://door.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node3D" unique_id=891741394]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08767986, 0)
 
 [node name="Player" parent="." unique_id=1394538352 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9819884, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.9819884, 0)
 collision_layer = 32769
 collision_mask = 32769
 
-[node name="Room" parent="." unique_id=139799760 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.049588323, 1.9673042, 0.009315968)
-
 [node name="Portal3D" parent="." unique_id=465671818 node_paths=PackedStringArray("exit_portal") instance=ExtResource("3_h2yge")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.30966568, -1.3581524, 4.932973)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.76979, 0.6869467, 0.8516698)
 exit_portal = NodePath(".")
 
 [node name="Portal3D2" parent="." unique_id=1112653889 node_paths=PackedStringArray("exit_portal") instance=ExtResource("3_h2yge")]
-transform = Transform3D(0.019246211, 0, 0.49962944, 0, 0.5, 0, -0.49962944, 0, 0.019246211, 4.3162265, -1.3581524, -0.6316767)
+transform = Transform3D(0.019246211, 0, 0.49962944, 0, 0.5, 0, -0.49962944, 0, 0.019246211, 8.8005295, 0.6450236, -7.097582)
 exit_portal = NodePath("../Portal3D")
+
+[node name="MeshInstance3D" parent="." unique_id=1678274034 instance=ExtResource("3_1bvp3")]
